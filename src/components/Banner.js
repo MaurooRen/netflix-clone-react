@@ -52,10 +52,9 @@ const Banner = () => {
                 <h2 className="banner_description">
                     { truncate(movie?.overview, 150) }
                 </h2>
-
-                {/* div > 2 buttons */}
-                {/* description */}
             </div>
+
+            <div className="banner--fadeBottom"></div>
 
 
         </header>
