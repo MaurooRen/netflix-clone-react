@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from '../consts/axios'
+import '../styles/Row.css'
 
 const Row = ({ title, fetchUrl }) => {
+
+    const img_base_url = 'https://image.tmdb.org/t/p/original'
 
     const [movies, setMovies] = useState([])
 
@@ -17,7 +20,7 @@ const Row = ({ title, fetchUrl }) => {
             //When you make this 'request' WAIT for the answear to comeback
             //and the DO something
             const request = await axios.get(fetchUrl)
-            setMovies(request.data)
+            setMovies(request.data.results)
         }
         fetchData()
     }, [fetchUrl])
@@ -26,12 +29,17 @@ const Row = ({ title, fetchUrl }) => {
     //because we are depending of that variable
 
     return (
-        <div>
+        <div className="row">
             <h2>{ title }</h2>
 
-            {
-                // movies.map()
-            }
+            <div className="row_posters">
+                {
+                    movies.map(movie => (
+                        <img className="row_poster" src={`${img_base_url}${movie.poster_path}`} alt={movie.name} />
+                    ))
+                }
+            </div>
+
         </div>
     )
 }
