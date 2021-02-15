@@ -1,7 +1,7 @@
 import React from 'react';
 import Row from './components/Row';
 import Banner from './components/Banner';
-import Navbar from './components/Navbar';
+import Nav from './components/Nav';
 import requests from './consts/requests'
 import './styles/App.css';
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
 
-      <Navbar />
+      <Nav />
 
       <Banner />
 
