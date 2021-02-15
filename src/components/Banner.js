@@ -2,9 +2,15 @@ import React from 'react'
 
 const Banner = () => {
     return (
-        <div>
-            
-        </div>
+        <header> {/* background image */}
+
+            {/* title */}
+
+            {/* div > 2 buttons */}
+
+            {/* description */}
+
+        </header>
     )
 }
 
