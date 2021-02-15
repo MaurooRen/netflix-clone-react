@@ -1,5 +1,6 @@
 import React from 'react';
 import Row from './components/Row';
+import Banner from './components/Banner';
 import requests from './consts/requests'
 import './styles/App.css';
 
@@ -7,7 +8,10 @@ function App() {
   return (
     <div className="App">
 
+      {/* Header */}
+
       {/* Hero */}
+      <Banner />
 
       {/* Navbar */}
 
