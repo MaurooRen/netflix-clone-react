@@ -50,7 +50,7 @@ const Banner = () => {
                 </div>
                 
                 <h2 className="banner_description">
-                    { truncate(movie?.overview, 5) }
+                    { truncate(movie?.overview, 150) }
                 </h2>
 
                 {/* div > 2 buttons */}
