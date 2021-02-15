@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from '../consts/axios'
 import requests from '../consts/requests'
+import truncate from '../utils/truncate'
 import '../styles/Banner.css'
 
 
@@ -19,8 +20,6 @@ const Banner = () => {
         }
         fetchData()
     }, [])
-
-    console.log(movie)
 
     const img_base_url = 'https://image.tmdb.org/t/p/original'
 
@@ -51,7 +50,7 @@ const Banner = () => {
                 </div>
                 
                 <h2 className="banner_description">
-                    { movie?.overview }
+                    { truncate(movie?.overview, 5) }
                 </h2>
 
                 {/* div > 2 buttons */}
