@@ -7,7 +7,9 @@
   z-index: 1;
   top: 0;
   width: 100%;
-  transition: 0.5s;
+  /* Animation */
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
 }
 
 .nav_logo {
